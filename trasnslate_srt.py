@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# translate_srt_progress_parallel.py
-# Usage: python translate_srt_progress_parallel.py input.srt output.srt
+# translate_srt.py
+# Usage: python translate_srt.py input.srt output.srt
 
 import re
 import sys
@@ -9,11 +9,11 @@ from deep_translator import GoogleTranslator
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Konfigurasi
-SRC_LANG = 'id'   # Bahasa sumber (ubah sesuai kebutuhan)
-DEST_LANG = 'ja'  # Bahasa target
-WORKERS = 6       # Jumlah blok yang diterjemahkan sekaligus
-DELAY = 0.5       # Delay antar request per thread
+# Configuration 
+SRC_LANG = 'id'   # Source language (ISO 639-1 code)
+DEST_LANG = 'ja'  # Target language (ISO 639-1 code)
+WORKERS = 6       # Number of parallel translation threads
+DELAY = 0.5       # Delay between requests per thread (seconds)
 
 def translate_block(index, block):
     lines = block.splitlines()
@@ -54,7 +54,7 @@ def translate_srt_parallel(input_file, output_file):
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
-        print("Usage: python translate_srt_progress_parallel.py input.srt output.srt")
+        print("Usage: python translate_srt.py input.srt output.srt")
         sys.exit(1)
 
     translate_srt_parallel(sys.argv[1], sys.argv[2])
