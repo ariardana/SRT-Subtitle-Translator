@@ -1,0 +1,19 @@
+# SRT Subtitle Translator Requirements
+# Install with: pip install -r requirements.txt
+
+# Core translation library
+deep-translator==1.11.4
+
+# Progress bar for user feedback
+tqdm==4.66.1
+
+# Optional: Better HTTP handling (recommended for stability)
+requests==2.31.0
+
+# Optional: Enhanced text processing
+beautifulsoup4==4.12.2
+
+# Development dependencies (uncomment if needed)
+# pytest==7.4.3
+# black==23.9.1
+# flake8==6.1.0
