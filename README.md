@@ -34,12 +34,8 @@ pip install deep-translator tqdm
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/srt-translator.git
-cd srt-translator
-
-# Or download directly
-curl -O https://raw.githubusercontent.com/yourusername/srt-translator/main/translate_srt.py
-chmod +x translate_srt.py
+git clone https://github.com/ariardana/SRT-Subtitle-Translator
+cd SRT-Subtitle-Translator
 ```
 
 ## 🚀 Quick Start
@@ -122,7 +118,7 @@ The tool supports 100+ languages through Google Translate. Here are the most com
 | `hi` | Hindi | `id` | Indonesian |
 | `ms` | Malay | `tl` | Filipino |
 
-> 💡 Use `--list-langs` to see all available language codes
+> 💡 Use `--list-langs` to see all available language codes or see [Google Translate supported languages](https://cloud.google.com/translate/docs/languages)
 
 ## ⚙️ Performance Tuning
 
@@ -268,17 +264,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [deep-translator](https://pypi.org/project/deep-translator/) - Translation API wrapper
 - [tqdm](https://pypi.org/project/tqdm/) - Progress bar library
 - Google Translate - Translation service
-
-## 📈 Roadmap
-
-- [ ] GUI interface for non-technical users
-- [ ] Support for other subtitle formats (VTT, ASS, SSA)
-- [ ] Integration with other translation services (DeepL, Azure)
-- [ ] Subtitle timing adjustment features
-- [ ] Batch processing with progress tracking
-- [ ] Translation quality scoring
-- [ ] Custom translation models support
-
 ---
 
 ⭐ **Star this repository if you find it helpful!**
